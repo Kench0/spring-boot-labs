@@ -1,0 +1,8 @@
+SQL: SELECT * FROM STUDENTS; SELECT * FROM DISCIPLINES;
+
+ID | AGE | FACULTY  | NAME   | SURNAME
+2  | 22  | ИРИТ-РТФ | Кирилл | Скуратов
+(1 row, 12 ms)
+ID | HOURS | NAME                        | TEACHER
+2  | 144   | Технологии программирования | Преподаватель
+(1 row, 0 ms)

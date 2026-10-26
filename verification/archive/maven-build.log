@@ -1,0 +1,282 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] lab01                                                              [jar]
+[INFO] lab02                                                              [jar]
+[INFO] lab03                                                              [jar]
+[INFO] lab04                                                              [jar]
+[INFO] lab05                                                              [jar]
+[INFO] lab06                                                              [jar]
+[INFO] lab07                                                              [jar]
+[INFO] lab08                                                              [jar]
+[INFO] spring-labs                                                        [pom]
+[INFO] 
+[INFO] Using the MultiThreadedBuilder implementation with a thread count of 2
+[INFO] 
+[INFO] ---------------------------< ru.urfu:lab01 >----------------------------
+[INFO] Building lab01 1.0.0                                               [1/9]
+[INFO]   from lab01/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] ---------------------------< ru.urfu:lab02 >----------------------------
+[INFO] Building lab02 1.0.0                                               [2/9]
+[INFO]   from lab02/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ lab01 ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ lab02 ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ lab01 ---
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ lab02 ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 2 source files with javac [debug release 17] to target/classes
+[INFO] Compiling 16 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ lab01 ---
+[INFO] skip non existing resourceDirectory /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab01/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ lab01 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ lab01 ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ lab02 ---
+[INFO] skip non existing resourceDirectory /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab02/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ lab02 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ lab02 ---
+[INFO] No tests to run.
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ lab02 ---
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ lab01 ---
+[INFO] Building jar: /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab01/target/lab01-1.0.0.jar
+[INFO] Building jar: /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab02/target/lab02-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.1.5:repackage (repackage) @ lab02 ---
+[INFO] 
+[INFO] --- spring-boot:3.1.5:repackage (repackage) @ lab01 ---
+[INFO] Replacing main artifact /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab02/target/lab02-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab02/target/lab02-1.0.0.jar.original
+[INFO] 
+[INFO] ---------------------------< ru.urfu:lab03 >----------------------------
+[INFO] Building lab03 1.0.0                                               [3/9]
+[INFO]   from lab03/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Replacing main artifact /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab01/target/lab01-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab01/target/lab01-1.0.0.jar.original
+[INFO] 
+[INFO] ---------------------------< ru.urfu:lab04 >----------------------------
+[INFO] Building lab04 1.0.0                                               [4/9]
+[INFO]   from lab04/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ lab03 ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ lab03 ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 16 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ lab04 ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ lab04 ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 20 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ lab03 ---
+[INFO] skip non existing resourceDirectory /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab03/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ lab03 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ lab03 ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ lab03 ---
+[INFO] Building jar: /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab03/target/lab03-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.1.5:repackage (repackage) @ lab03 ---
+[INFO] Replacing main artifact /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab03/target/lab03-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab03/target/lab03-1.0.0.jar.original
+[INFO] 
+[INFO] ---------------------------< ru.urfu:lab05 >----------------------------
+[INFO] Building lab05 1.0.0                                               [5/9]
+[INFO]   from lab05/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ lab05 ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ lab05 ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 19 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ lab04 ---
+[INFO] skip non existing resourceDirectory /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab04/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ lab04 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ lab04 ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ lab04 ---
+[INFO] Building jar: /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab04/target/lab04-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.1.5:repackage (repackage) @ lab04 ---
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ lab05 ---
+[INFO] skip non existing resourceDirectory /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab05/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ lab05 ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target/test-classes
+[INFO] Replacing main artifact /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab04/target/lab04-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab04/target/lab04-1.0.0.jar.original
+[INFO] 
+[INFO] ---------------------------< ru.urfu:lab06 >----------------------------
+[INFO] Building lab06 1.0.0                                               [6/9]
+[INFO]   from lab06/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ lab06 ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ lab06 ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 14 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ lab05 ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ru.urfu.lab.AnnualBonusServiceTest
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ lab06 ---
+[INFO] skip non existing resourceDirectory /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab06/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ lab06 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ lab06 ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ lab06 ---
+[INFO] Building jar: /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab06/target/lab06-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.1.5:repackage (repackage) @ lab06 ---
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.099 s - in ru.urfu.lab.AnnualBonusServiceTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ lab05 ---
+[INFO] Building jar: /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab05/target/lab05-1.0.0.jar
+[INFO] Replacing main artifact /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab06/target/lab06-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab06/target/lab06-1.0.0.jar.original
+[INFO] 
+[INFO] ---------------------------< ru.urfu:lab07 >----------------------------
+[INFO] Building lab07 1.0.0                                               [7/9]
+[INFO]   from lab07/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- spring-boot:3.1.5:repackage (repackage) @ lab05 ---
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ lab07 ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ lab07 ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 8 source files with javac [debug release 17] to target/classes
+[INFO] Replacing main artifact /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab05/target/lab05-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab05/target/lab05-1.0.0.jar.original
+[INFO] 
+[INFO] ---------------------------< ru.urfu:lab08 >----------------------------
+[INFO] Building lab08 1.0.0                                               [8/9]
+[INFO]   from lab08/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ lab08 ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 9 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ lab08 ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 15 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ lab07 ---
+[INFO] skip non existing resourceDirectory /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab07/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ lab07 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ lab07 ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ lab07 ---
+[INFO] Building jar: /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab07/target/lab07-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.1.5:repackage (repackage) @ lab07 ---
+[INFO] Replacing main artifact /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab07/target/lab07-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab07/target/lab07-1.0.0.jar.original
+[INFO] 
+[INFO] ------------------------< ru.urfu:spring-labs >-------------------------
+[INFO] Building spring-labs 1                                             [9/9]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ lab08 ---
+[INFO] skip non existing resourceDirectory /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab08/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ lab08 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.0.0:test (default-test) @ lab08 ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.3.0:jar (default-jar) @ lab08 ---
+[INFO] Building jar: /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab08/target/lab08-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:3.1.5:repackage (repackage) @ lab08 ---
+[INFO] Replacing main artifact /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab08/target/lab08-1.0.0.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to /workspace/scratch/14b3ff8542a7/out/Spring_Boot_Skuratov/lab08/target/lab08-1.0.0.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] lab01 1.0.0 ........................................ SUCCESS [  5.368 s]
+[INFO] lab02 1.0.0 ........................................ SUCCESS [  5.357 s]
+[INFO] lab03 1.0.0 ........................................ SUCCESS [  0.731 s]
+[INFO] lab04 1.0.0 ........................................ SUCCESS [  1.413 s]
+[INFO] lab05 1.0.0 ........................................ SUCCESS [  3.106 s]
+[INFO] lab06 1.0.0 ........................................ SUCCESS [  2.241 s]
+[INFO] lab07 1.0.0 ........................................ SUCCESS [  1.124 s]
+[INFO] lab08 1.0.0 ........................................ SUCCESS [  1.454 s]
+[INFO] spring-labs 1 ...................................... SUCCESS [  0.001 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  11.142 s (Wall Clock)
+[INFO] Finished at: 2026-10-26T18:21:23+03:00
+[INFO] ------------------------------------------------------------------------

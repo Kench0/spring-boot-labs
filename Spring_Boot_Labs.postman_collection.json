@@ -1,0 +1,1438 @@
+{
+  "info": {
+    "name": "Spring Boot — Скуратов К. А. — ЛР 1–8",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Работы запускаются по очереди. ЛР 4 требует второго процесса на 8084. ЛР 1 требует свежего запуска. В ЛР 6 идентификаторы сохраняются в переменные коллекции из POST автоматически. Проверки регистрации, входа и CSRF ЛР 8 выполняются в браузере."
+  },
+  "item": [
+    {
+      "name": "ЛР 1",
+      "item": [
+        {
+          "name": "Приветствие",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/hello"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Параметр имени",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/hello?name=Kench"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Пустые коллекции",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/show-all-lenght"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Инициализация списка",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/update-array?s=first"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Добавление списка",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/update-array?s=Java"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Второе добавление",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/update-array?s=Spring"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Список",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/show-array"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Инициализация словаря",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/update-map?s=first"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Добавление словаря",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/update-map?s=Maven"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Словарь",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/show-map"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Количество",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/show-all-lenght"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ЛР 2",
+      "item": [
+        {
+          "name": "Корректный запрос",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Пустой uid",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Длинный uid",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Пустой operationUid",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Длинный operationUid",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Пустое systemTime",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "communicationId меньше 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 0,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "communicationId больше 100000",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100001,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Отсутствующий communicationId",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": null,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Все ошибки",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"\",\n  \"operationUid\": \"\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"\",\n  \"source\": \"postman\",\n  \"communicationId\": 0,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Запрещенный uid 123",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"123\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 422\", function () { pm.response.to.have.status(422); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Допустимая граница 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 1,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Допустимая граница 100000",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100000,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ЛР 3",
+      "item": [
+        {
+          "name": "Система ERP",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Система CRM",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"CRM\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Система WMS",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"WMS\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Неизвестная система",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"OTHER\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Ошибка валидации",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ЛР 4",
+      "item": [
+        {
+          "name": "Передача Сервис 1 → Сервис 2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ЛР 5",
+      "item": [
+        {
+          "name": "Премия HR",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10,\n  \"position\": \"HR\",\n  \"salary\": 100000,\n  \"bonus\": 2,\n  \"workDays\": 243,\n  \"year\": 2024,\n  \"quarter\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Премия TL",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8082/feedback",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"uid\": \"1\",\n  \"operationUid\": \"op-001\",\n  \"systemName\": \"ERP\",\n  \"systemTime\": \"2026-10-26T12:00:00Z\",\n  \"source\": \"postman\",\n  \"communicationId\": 100,\n  \"templateId\": 8,\n  \"productCode\": 1500,\n  \"smsCode\": 10,\n  \"position\": \"TL\",\n  \"salary\": 100000,\n  \"bonus\": 2,\n  \"workDays\": 243,\n  \"year\": 2024,\n  \"quarter\": 1\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ЛР 6",
+      "item": [
+        {
+          "name": "students создание",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8080/api/students",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Кирилл\",\n  \"surname\": \"Скуратов\",\n  \"faculty\": \"ИРИТ-РТФ\",\n  \"age\": 22\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+                  "pm.collectionVariables.set(\"studentId\", pm.response.json().data.id);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "students список",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/students"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "students чтение",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/students/{{studentId}}"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "students изменение",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8080/api/students",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Кирилл\",\n  \"surname\": \"Скуратов\",\n  \"faculty\": \"ИРИТ-РТФ\",\n  \"age\": 23,\n  \"id\": {{studentId}}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "students удаление",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://localhost:8080/api/students/{{studentId}}"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "students отсутствует",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/students/{{studentId}}"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 404\", function () { pm.response.to.have.status(404); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "students сохранение для SQL",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8080/api/students",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Кирилл\",\n  \"surname\": \"Скуратов\",\n  \"faculty\": \"ИРИТ-РТФ\",\n  \"age\": 22\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+                  "pm.collectionVariables.set(\"studentId\", pm.response.json().data.id);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "disciplines создание",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8080/api/disciplines",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Технологии программирования\",\n  \"hours\": 144,\n  \"teacher\": \"Преподаватель\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+                  "pm.collectionVariables.set(\"disciplineId\", pm.response.json().data.id);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "disciplines список",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/disciplines"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "disciplines чтение",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/disciplines/{{disciplineId}}"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "disciplines изменение",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8080/api/disciplines",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Технологии программирования\",\n  \"hours\": 180,\n  \"teacher\": \"Преподаватель\",\n  \"id\": {{disciplineId}}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "disciplines удаление",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "http://localhost:8080/api/disciplines/{{disciplineId}}"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "disciplines отсутствует",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/api/disciplines/{{disciplineId}}"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 404\", function () { pm.response.to.have.status(404); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "disciplines сохранение для SQL",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8080/api/disciplines",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Технологии программирования\",\n  \"hours\": 144,\n  \"teacher\": \"Преподаватель\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 201\", function () { pm.response.to.have.status(201); });",
+                  "pm.collectionVariables.set(\"disciplineId\", pm.response.json().data.id);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Невалидный возраст",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "http://localhost:8080/api/students",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Иван\",\n  \"surname\": \"Иванов\",\n  \"faculty\": \"ИТ\",\n  \"age\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 400\", function () { pm.response.to.have.status(400); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ЛР 7",
+      "item": [
+        {
+          "name": "Actuator health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/actuator/health"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Actuator info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/actuator/info"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Actuator metrics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/actuator/metrics"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Actuator metrics/jvm.memory.used",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "http://localhost:8080/actuator/metrics/jvm.memory.used"
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", function () { pm.response.to.have.status(200); });"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ЛР 8",
+      "item": [
+        {
+          "name": "Главная страница",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/",
+            "header": []
+          }
+        },
+        {
+          "name": "Форма регистрации",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/register",
+            "header": []
+          }
+        },
+        {
+          "name": "Форма входа",
+          "request": {
+            "method": "GET",
+            "url": "http://localhost:8080/login",
+            "header": []
+          }
+        }
+      ]
+    }
+  ]
+}

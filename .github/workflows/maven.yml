@@ -1,0 +1,37 @@
+name: Maven labs
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    name: ${{ matrix.lab }} / Java 17
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        lab: [lab01, lab02, lab03, lab04, lab05, lab06, lab07, lab08]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+      - name: Build and test
+        working-directory: ${{ matrix.lab }}
+        shell: bash
+        run: |
+          set -o pipefail
+          mvn -B --no-transfer-progress clean verify 2>&1 | tee maven-current.log
+      - name: Save fresh logs and test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-${{ matrix.lab }}-${{ github.sha }}
+          path: |
+            ${{ matrix.lab }}/maven-current.log
+            ${{ matrix.lab }}/target/surefire-reports/

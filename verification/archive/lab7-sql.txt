@@ -1,0 +1,7 @@
+SQL: SELECT * FROM STUDENTS; SELECT * FROM STUDY_GROUPS;
+
+ID | AGE | FACULTY  | NAME   | SURNAME
+1  | 23  | ИРИТ-РТФ | Кирилл | Скуратов
+(1 row, 22 ms)
+ID | COURSE | FACULTY | NAME
+(0 rows, 0 ms)

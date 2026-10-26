@@ -1,0 +1,14 @@
+SQL: SELECT ID,FIRST_NAME,LAST_NAME,EMAIL,LEFT(PASSWORD,7) AS HASH_PREFIX,LENGTH(PASSWORD) AS HASH_LENGTH FROM USERS; SELECT * FROM ROLES; SELECT * FROM USER_ROLES; SELECT * FROM STUDENTS;
+
+ID | FIRST_NAME | LAST_NAME | EMAIL                 | HASH_PREFIX | HASH_LENGTH
+1  | Кирилл     | Скуратов  | skuratov@example.test | $2a$10$     | 60
+(1 row, 15 ms)
+ID | NAME
+1  | ROLE_USER
+(1 row, 1 ms)
+USER_ID | ROLE_ID
+1       | 1
+(1 row, 0 ms)
+ID | AGE | FACULTY  | NAME   | SURNAME
+1  | 23  | ИРИТ-РТФ | Кирилл | Скуратов
+(1 row, 0 ms)
