@@ -1,9 +1,0 @@
-lab4-8082.log
-[nio-8082-exec-2] ru.urfu.lab.controller.MyController      : request received Request(uid=1, operationUid=op-001, systemName=ERP, systemTime=2026-10-26T12:00:00Z, source=postman, communicationId=100, templateId=8, productCode=1500, smsCode=10)
-[nio-8082-exec-2] ru.urfu.lab.service.SourceModifier       : request source changed uid=1 source=service-1
-[nio-8082-exec-2] ru.urfu.lab.service.ForwardService       : forwarded uid=1
-[nio-8082-exec-2] r.urfu.lab.service.TimeResponseModifier  : response time updated uid=1 time=2026-10-26T15:09:36.172Z
-[nio-8082-exec-2] r.u.l.service.OperationResponseModifier  : response operation updated uid=1 operation=op-001-processed
-[nio-8082-exec-2] ru.urfu.lab.service.ProcessingService    : response completed Response(uid=1, operationUid=op-001-processed, systemTime=2026-10-26T15:09:36.172Z, code=success, errorCode=None, errorMessage=None, details=[])
-lab4-8084.log
-[nio-8084-exec-2] r.u.lab.controller.ReceiverController    : service-2 received uid=1 source=service-1 elapsedMs=190
